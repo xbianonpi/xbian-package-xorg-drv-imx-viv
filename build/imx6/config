@@ -1,0 +1,12 @@
+config_source_configure=
+config_source_keep=yes
+config_source_reset=yes
+config_source_refresh=yes
+config_source_prepare=true
+config_build_env=schroot -c armhfjessie -p --
+config_build_make=make
+config_deb_pkgname=xserver-xorg-video-imx-viv
+config_build_targets=all
+config_install_targets=install
+config_deb_contentclean=yes
+config_deb_version=12.09.01
