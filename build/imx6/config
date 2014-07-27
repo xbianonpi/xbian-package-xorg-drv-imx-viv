@@ -9,4 +9,6 @@ config_deb_pkgname=xserver-xorg-video-imx-viv
 config_build_targets=all
 config_install_targets=install
 config_deb_contentclean=yes
-config_deb_version=12.09.01
+config_deb_version=1.3.0-1
+config_deb_depends=firmware-imx, xserver-common
+config_deb_ctrlextra=Replaces: xbian-package-xserver-xorg-video-vivante-6q\\nBreaks: xbian-package-xserver-xorg-video-vivante-6q (<<2.0.0), firmware-imx (<<1.7.0)

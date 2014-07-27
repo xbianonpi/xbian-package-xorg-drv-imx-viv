@@ -1,6 +1,6 @@
 --- /dev/null	2014-07-17 01:04:37.933893999 +0200
 +++ b/Makefile	2014-07-27 03:57:13.248497861 +0200
-@@ -0,0 +1,13 @@
+@@ -0,0 +1,14 @@
 +
 +
 +all:
@@ -14,3 +14,4 @@
 +	cp EXA/src/vivante_drv.so $(DESTDIR)/usr/lib/xorg/modules/drivers/
 +	mkdir -p $(DESTDIR)/usr/lib/xorg/modules/extensions/
 +	cp DRI_1.10.4/src/libdri.so $(DESTDIR)/usr/lib/xorg/modules/extensions/
++	cp FslExt/src/libfsl_x11_ext.so $(DESTDIR)/usr/lib/xorg/modules/extensions/

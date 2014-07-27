@@ -3,3 +3,4 @@ config_source_type=tar
 ###config_source_addr=git://github.com/zOrg1331/xorg-drv-vivante.git
 config_source_addr=http://www.freescale.com/lgfiles/NMG/MAD/YOCTO/xserver-xorg-video-imx-viv-3.10.17-1.0.0.tar.gz
 config_source_branch=master
+config_deb_pkgname=xserver-xorg-video-imx-viv
