@@ -1,13 +1,13 @@
 --- /dev/null	2014-07-17 01:04:37.933893999 +0200
 +++ b/Makefile	2014-07-27 03:57:13.248497861 +0200
-@@ -0,0 +1,14 @@
+@@ -0,0 +1,17 @@
 +
 +
 +all:
-+	make -C EXA/src/ -f makefile.linux XSERVER_GREATER_THAN_13=1 BUILD_HARD_VFP=1 LINUX_FB=1
-+	make -C DRI_1.10.4/src/ -f makefile.linux SWAP_SINGLE_PARAMETER=1 BUILD_HARD_VFP=1 LINUX_FB=1
-+	make -C util/autohdmi/ -f makefile.linux SWAP_SINGLE_PARAMETER=1 BUILD_HARD_VFP=1 LINUX_FB=1
-+	make -C FslExt/src/ -f makefile.linux SWAP_SINGLE_PARAMETER=1 BUILD_HARD_VFP=1 LINUX_FB=1
++	make -C EXA/src/ -f makefile.linux XSERVER_GREATER_THAN_13=1 BUILD_HARD_VFP=1 EGL_API_FB=1 BUSID_HAS_NUMBER=1
++	make -C DRI_1.10.4/src/ -f makefile.linux SWAP_SINGLE_PARAMETER=1 BUILD_HARD_VFP=1 EGL_API_FB=1 BUSID_HAS_NUMBER=1
++	make -C util/autohdmi/ -f makefile.linux SWAP_SINGLE_PARAMETER=1 BUILD_HARD_VFP=1 EGL_API_FB=1 BUSID_HAS_NUMBER=1
++	make -C FslExt/src/ -f makefile.linux SWAP_SINGLE_PARAMETER=1 BUILD_HARD_VFP=1 EGL_API_FB=1 BUSID_HAS_NUMBER=1
 +
 +install:
 +	mkdir -p $(DESTDIR)/usr/lib/xorg/modules/drivers/
@@ -15,3 +15,6 @@
 +	mkdir -p $(DESTDIR)/usr/lib/xorg/modules/extensions/
 +	cp DRI_1.10.4/src/libdri.so $(DESTDIR)/usr/lib/xorg/modules/extensions/
 +	cp FslExt/src/libfsl_x11_ext.so $(DESTDIR)/usr/lib/xorg/modules/extensions/
++
++clean:
++	find ./ -iname \*.so -o -iname \*.o | xargs rm -v

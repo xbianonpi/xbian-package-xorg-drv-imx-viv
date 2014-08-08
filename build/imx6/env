@@ -1,2 +1,2 @@
-CFLAGS=-march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9 -mfloat-abi=hard -O3 -pipe -I/usr/include/X11 -I/usr/include -L/usr/lib -lGAL-x11 -I../../exa/src/vivante_gal -I../../exa/src/vivante_util  -lm -ldl -ldrm -lX11 -Wa,-mimplicit-it=thumb
+CFLAGS=-march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9 -mfloat-abi=hard -O3 -pipe -DEGL_API_FB=1 -I/usr/include/X11 -I/usr/include -L/usr/lib -lGAL-x11 -I../../exa/src/vivante_gal -I../../exa/src/vivante_util  -lm -ldl -ldrm -lX11 -Wa,-mimplicit-it=thumb
 ### -g
