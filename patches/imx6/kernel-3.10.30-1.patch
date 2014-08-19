@@ -1,0 +1,11 @@
+--- a/EXA/src/makefile.linux
++++ b/EXA/src/makefile.linux
+@@ -57,7 +57,7 @@
+ LOCAL_CFLAGS += -I$(sysroot)/usr/include/drm -I/usr/include/xcb
+ 
+ LOCAL_LFLAGS += -fPIC
+-LOCAL_LFLAGS += -L$(sysroot)/usr/lib -lm -ldl -lGAL -Wl,-soname -Wl,vivante_drv.so
++LOCAL_LFLAGS += -L$(sysroot)/usr/lib -lGAL -ldrm -lm -ldl -Wl,-soname -Wl,vivante_drv.so
+ 
+ all: $(target)
+ 
